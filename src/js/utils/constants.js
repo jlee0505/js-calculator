@@ -8,7 +8,7 @@ export const MUL = "X";
 export const DIV = "/";
 export const EQUAL = "=";
 export const AC = "AC";
-export const OPERATORS = [ADD, SUB, MUL, DIV, EQUAL, AC];
+export const Operators = { ADD, SUB, MUL, DIV, EQUAL, AC };
 
 export const Selectors = {
   CALC: ".calculator",

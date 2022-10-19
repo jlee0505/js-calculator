@@ -1,7 +1,7 @@
 import {
   INITIAL_VALUE,
   ERROR_MESSAGES,
-  OPERATORS,
+  Operators,
 } from "../utils/constants.js";
 import { Selectors, INITIAL_NUM_COUNT } from "../utils/constants.js";
 import { $ } from "../utils/dom.js";
@@ -45,7 +45,8 @@ const handleOperation = (operator) => {
     throw new Error(ERROR_MESSAGES.INVALID_DIGIT_LENGTH);
   }
 
-  if (operator === "=") {
+  if (operator === Operators.EQUAL) {
+
     getResult();
     numberCount = INITIAL_NUM_COUNT;
     return;
@@ -61,13 +62,7 @@ const handleModifier = () => {
 };
 
 const getResult = () => {
-  // const operator = $(Selectors.TOTAL)
-  //   .textContent.split("")
-  //   .find((i) => OPERATORS.includes(i));
-
-  const operator = [...$(Selectors.TOTAL).textContent].find(
-    OPERATORS.includes.bind(OPERATORS)
-  );
+  const operator = [...$(Selectors.TOTAL).textContent].find((e) => isNaN(e));
 
   const [num1, num2] = $(Selectors.TOTAL).textContent.split(operator);
   $(Selectors.TOTAL).textContent = operation({ num1, num2, operator });
