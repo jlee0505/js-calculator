@@ -46,6 +46,7 @@ const handleOperation = (operator) => {
   }
 
   if (operator === Operators.EQUAL) {
+
     getResult();
     numberCount = INITIAL_NUM_COUNT;
     return;
