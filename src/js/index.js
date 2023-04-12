@@ -1,9 +1,9 @@
-import { Selectors } from "./utils/constants.js";
+import { SELECTORS } from "./utils/constants.js";
 import { $ } from "./utils/dom.js";
 import { handleCalculator } from "./handlers/handleCalculator.js";
 
 const calculator = () => {
-  const $calculator = $(Selectors.CALC);
+  const $calculator = $(SELECTORS.CALC);
   $calculator.addEventListener("click", handleCalculator);
 };
 

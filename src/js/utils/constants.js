@@ -10,7 +10,7 @@ export const EQUAL = "=";
 export const AC = "AC";
 export const Operators = { ADD, SUB, MUL, DIV, EQUAL, AC };
 
-export const Selectors = {
+export const SELECTORS = {
   CALC: ".calculator",
   TOTAL: "#total",
   DIGIT: ".digit",
