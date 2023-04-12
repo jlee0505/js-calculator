@@ -2,13 +2,14 @@ export const MAX_DIGIT_LENGTH = 3;
 export const INITIAL_NUM_COUNT = 0;
 export const INITIAL_VALUE = "0";
 
-const ADD = "+";
-const SUB = "-";
-const MUL = "X";
-const DIV = "/";
-const EQUAL = "=";
-const AC = "AC";
-export const OPERATORS = { ADD, SUB, MUL, DIV, EQUAL, AC };
+export const OPERATORS = {
+  ADD: "+",
+  SUB: "-",
+  MUL: "*",
+  DIV: "/",
+  EQUAL: "=",
+  AC: "AC",
+};
 
 export const SELECTORS = {
   CALC: ".calculator",

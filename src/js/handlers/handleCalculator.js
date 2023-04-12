@@ -62,7 +62,6 @@ const handleModifier = () => {
 
 const getResult = () => {
   const operator = [...$(SELECTORS.TOTAL).textContent].find((e) => isNaN(e));
-
   const [num1, num2] = $(SELECTORS.TOTAL).textContent.split(operator);
   $(SELECTORS.TOTAL).textContent = operation({ num1, num2, operator });
 };
