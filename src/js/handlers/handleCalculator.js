@@ -1,7 +1,7 @@
 import {
   INITIAL_VALUE,
   ERROR_MESSAGES,
-  Operators,
+  OPERATORS,
 } from "../utils/constants.js";
 import { SELECTORS, INITIAL_NUM_COUNT } from "../utils/constants.js";
 import { $ } from "../utils/dom.js";
@@ -45,7 +45,7 @@ const handleOperation = (operator) => {
     throw new Error(ERROR_MESSAGES.INVALID_DIGIT_LENGTH);
   }
 
-  if (operator === Operators.EQUAL) {
+  if (operator === OPERATORS.EQUAL) {
     getResult();
     numberCount = INITIAL_NUM_COUNT;
     return;
